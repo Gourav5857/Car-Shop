@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter</title>
+    <style>
+    .container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height:100vh;
+    }
+    .button{
+        height: 100px;
+        width: 150px;
+        margin: 50px;
+        padding: 10px;
+    }
+    .number{
+        align-items: center;
+        margin-top: 200px;
+    }
+
+    
+</style>
+</head>
+<body>
+   
+    <div class="container">
+        <div>
+        <div style="text-align: center;" class="number" id="num">
+            0
+        
+    </div>
+    <button class="button" id="increment">Increment</button>
+    <button class="button" id="decerement">Decerement</button>
+    <button class="button" id="reset">Reset</button>
+</div>
+</div>
+
+<script>
+    let count = 0;
+
+    const display = document.getElementById("num");
+    const incrementbt = document.getElementById("increment");
+    const decerementbt = document.getElementById("decerement");
+    const resetbt = document.getElementById("reset");
+    function counterdisplay(){
+        display.textContent = count;
+    }
+
+    incrementbt.addEventListener("click", ()=>{
+        count++;
+        counterdisplay();
+    });
+
+    decerementbt.addEventListener("click", ()=>{
+        count--;
+        counterdisplay();
+    });
+
+    resetbt.addEventListener("click", ()=>{
+        count=0;
+        counterdisplay();
+    });
+</script>
+</body>
+</html>
